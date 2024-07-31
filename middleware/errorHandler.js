@@ -10,7 +10,7 @@ const errorHandler = (err, req, res, next) => {
         res.json({title: "Not Found", message: err.message, stackTrace: err.stack})
     }
     else if(statusCode == constants.UNAUTHORIZED){
-        res.json({title: "Unautorized", message: err.message, stackTrace: err.stack})
+        res.json({title: "Unauthorized", message: err.message, stackTrace: err.stack})
     }
     else if(statusCode == constants.FORBIDDEN){
         res.json({title: "Forbidden", message: err.message, stackTrace: err.stack})
